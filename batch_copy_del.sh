@@ -29,5 +29,7 @@ echo "Copying to $filename, log is saved to $logfile"
 copy_del.sh "$year-$month-$last_day 00:00:00" "$year-$next_month-1 00:00:00" $filename
 #Copy devices
 now_date=$(date -d "now" +"%Y-%m-%d")
-file_device="$folder/device_$now_date.csv"
+file_device="$folder/devices.csv"
 get_devices.sh $file_device
+file_keys="$folder/ts_kv_dictionary.csv
+get_keys.sh $file_keys
